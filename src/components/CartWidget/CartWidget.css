@@ -1,0 +1,12 @@
+.CartWidget {
+  position: relative;
+}
+
+.CartImg {
+  height: 30px;
+  width: 30px;
+}
+
+.CartWidget:hover .CartImg {
+  transform: scale(1.1);
+}
