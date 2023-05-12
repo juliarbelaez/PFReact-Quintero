@@ -3,8 +3,12 @@ import "./CheckoutForm.css";
 
 const CheckoutForm = ({ onConfirm }) => {
   const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [verifiedEmail, setVerifiedEmail] = useState("");
+
+  const [address, setAddress] = useState("");
 
   const handleConfirm = (event) => {
     event.preventDefault();
@@ -12,42 +16,101 @@ const CheckoutForm = ({ onConfirm }) => {
     const userData = {
       name,
       phone,
+      lastName,
       email,
+      address,
+      verifiedEmail,
     };
     onConfirm(userData);
   };
   return (
-    <div className="Container">
-      <form onSubmit={handleConfirm} className="Form">
-        <label htmlFor="name" className="Label">
-          <h1>Nombre</h1>
+    <div class="containerCheckOut">
+      <form onSubmit={handleConfirm} className="FormFields">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inputEmail4">Nombre</label>
+            <input
+              type="text"
+              id="inputEmail4"
+              className="form-control"
+              name="email"
+              placeholder="Nombre"
+              required
+              value={name}
+              onChange={({ target }) => setName(target.value)}
+            />
+            <div class="invalid-feedback">Por favor, introduzca su nombre.</div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail4">Apellido</label>
+            <input
+              type="text"
+              id="inputEmail4"
+              className="form-control"
+              name="lastName"
+              placeholder="Apellido"
+              required
+              value={lastName}
+              onChange={({ target }) => setLastName(target.value)}
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4">Celular</label>
           <input
-            className="Input"
             type="text"
-            value={name}
-            onChange={({ target }) => setName(target.value)}
-          />
-        </label>
-        <label htmlFor="phone" className="Label">
-          <h1>Celular</h1>
-          <input
-            className="Input"
-            type="text"
+            id="inputEmail4"
+            className="form-control"
+            name="lastName"
+            placeholder="(+57)31165704399"
+            required
             value={phone}
             onChange={({ target }) => setPhone(target.value)}
           />
-        </label>
-        <label htmlFor="email" className="Label">
-          <h1>Correo</h1>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4">Email</label>
           <input
-            className="Input"
-            type="text"
+            type="email"
+            id="inputEmail4"
+            className="form-control"
+            name="lastName"
+            placeholder="email@mail.co"
+            required
             value={email}
             onChange={({ target }) => setEmail(target.value)}
           />
-        </label>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail4">Verifique su email</label>
+          <input
+            type="email"
+            id="inputEmail4"
+            className="form-control"
+            name="lastName"
+            placeholder="email@mail.co"
+            required
+            value={verifiedEmail}
+            onChange={({ target }) => setVerifiedEmail(target.value)}
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmail4">Dirección de envío</label>
+          <input
+            type="text"
+            id="inputEmail4"
+            className="form-control"
+            name="lastName"
+            placeholder="Cra 57 # 37B -10, Medellín"
+            required
+            value={address}
+            onChange={({ target }) => setAddress(target.value)}
+          />
+        </div>
+
         <div className="label">
-          <button type="submit" className="Button">
+          <button type="submit" className="btn btn btn-primary">
             Crear Orden
           </button>
         </div>

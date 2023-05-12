@@ -62,7 +62,6 @@ const CartItem = ({ id, image, name, price, quantity, category }) => {
                 </table>
               </div>
               <div className="row">
-                |
                 <div className="row justify-content-between">
                   <div className="col-md-6 mb-2">
                     <Link to="/">
@@ -70,16 +69,6 @@ const CartItem = ({ id, image, name, price, quantity, category }) => {
                         Seguir comprando
                       </button>
                     </Link>
-                  </div>
-
-                  <div className="col-md-6 mb-2">
-                    <div className="col-md-4 mb-2">
-                      <Link to="/checkout">
-                        <button className="btn btn btn-success">
-                          Finalizar Compra
-                        </button>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>

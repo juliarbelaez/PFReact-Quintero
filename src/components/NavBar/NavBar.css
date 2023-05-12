@@ -1,10 +1,6 @@
 .nav-item {
   padding: 20px;
 }
-h4 {
-  color: white;
-}
-
 .btn {
   margin: 30px;
   font-size: larger;
@@ -102,4 +98,12 @@ h4 {
 .utility-nav {
   height: 80px;
   width: 100%;
+}
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+.nav-item:hover {
+  color: #a55568;
 }

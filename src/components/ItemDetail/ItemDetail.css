@@ -1,25 +1,25 @@
-.genel .icerik {
+.genel .info {
   display: flex;
   width: 90%;
   justify-content: space-between;
   height: calc(100% - 15vh);
   margin: 0 5%;
 }
-.genel .icerik .sol {
+.genel .info .details {
   width: 40%;
 
   padding: 45px 35px;
   height: 90%;
 }
 
-.genel .icerik .sag {
+.genel .info .image {
   width: 58%;
 
   height: 90%;
   padding: 45px 0;
   position: relative;
 }
-.genel .icerik .sag img {
+.genel .info .image img {
   width: 100%;
   border-radius: 20px;
   height: auto;

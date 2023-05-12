@@ -44,17 +44,12 @@ const ItemDetail = ({
 
       <div class="ust">
         <div id="rp-menu" class="responsive-menu"></div>
-        <label id="openmenu" for="menuac">
+        <label id="openmenu" for="menu">
           <i class="fa fa-bars" aria-hidden="true"></i>
         </label>
-        <div class="sepet">
-          <label for="sepet">
-            <i class="fas fa-shopping-bag"></i>
-          </label>
-        </div>
       </div>
-      <div class="icerik">
-        <div class="sol">
+      <div class="info">
+        <div class="details">
           <h1>{name}</h1>
           <h6 className="detail">{id}</h6>
           <h6 className="detail">{category}</h6>
@@ -66,7 +61,7 @@ const ItemDetail = ({
           <div class="price">
             <strong>${price}</strong>
           </div>
-          <div class="alacaklı">
+          <div class="footer">
             <footer>
               {quantityAdded > 0 ? (
                 <Link to="/cart" className="Option">
@@ -80,7 +75,7 @@ const ItemDetail = ({
             </footer>
           </div>
         </div>
-        <div class="sag">
+        <div class="image">
           <img
             src={image}
             alt={name}

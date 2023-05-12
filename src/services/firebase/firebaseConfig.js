@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-  apiKey: "AIzaSyADLMnrjYtrXO1cPc2iXaW1UQdfkNObNbM",
-  authDomain: "ceramicascarmesi.firebaseapp.com",
-  projectId: "ceramicascarmesi",
-  storageBucket: "ceramicascarmesi.appspot.com",
-  messagingSenderId: "336385621689",
-  appId: "1:336385621689:web:b8e46b5ccee4164ef7a568",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 const app = initializeApp(firebaseConfig);

@@ -1,4 +1,6 @@
+import logo from "../../components/NavBar/assets/logo.png";
 import { useContext, useState } from "react";
+import "./Checkout.css";
 import { CartContext } from "../../context/CartContext";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import { Timestamp } from "firebase/firestore";
@@ -19,19 +21,22 @@ const Checkout = () => {
 
   const { cart, total, clearCart } = useContext(CartContext);
 
-  const createOrder = async ({ name, phone, email }) => {
+  const createOrder = async ({ name, lastName, phone, email, address }) => {
     setLoading(true);
     try {
       const objOrder = {
         buyer: {
           name,
+          lastName,
           phone,
           email,
+          address,
         },
         items: cart,
         price: total,
         date: Timestamp.fromDate(new Date()),
       };
+
       const batch = writeBatch(db);
 
       const outOfStock = [];
@@ -83,12 +88,72 @@ const Checkout = () => {
   }
 
   if (orderId) {
-    return <h2>El ID de su orden es: {orderId} </h2>;
+    return (
+      <div class="invoice-card">
+        <h5>Cerámicas Carmesí</h5>
+        <h6>Nit: 10356286487-2</h6>
+        <div class="invoice-title">
+          <div id="main-title">
+            <h4>Resumen de la compra</h4>
+            <span>
+              <img
+                className="logo"
+                src={logo}
+                alt="Carrito de Compras"
+                width={100}
+                height={100}
+              />
+            </span>
+          </div>
+        </div>
+
+        <div class="invoice-details">
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <td>Id de la compra</td>
+                <td>Fecha</td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="row-data">
+                <td>{orderId}</td>
+                <td>
+                  {new Date().toLocaleDateString("es-ES", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                  })}
+                </td>
+              </tr>
+
+              <tr class="calc-row">
+                <td colspan="2">Total</td>
+                <td>{total}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="invoice-footer">
+          <p>Gracias por tu compra</p>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div>
+    <div className="checkout">
       <h1>Checkout</h1>
+      <p className="parrafoCheckout">
+        Gracias por elegir apoyar a nuestro emprendimiento local. Su compra no
+        solo nos ayuda a continuar creciendo, sino que también nos motiva a
+        seguir mejorando y ofreciendo productos y servicios de alta calidad.
+        Agradecemos su confianza en nosotros y esperamos seguir siendo su
+        elección en el futuro. Si hay algo en lo que podamos ayudarle o si tiene
+        alguna sugerencia para mejorar, no dude en hacérnoslo saber.
+      </p>
       <CheckoutForm onConfirm={createOrder} />
     </div>
   );

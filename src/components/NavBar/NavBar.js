@@ -5,70 +5,75 @@ import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
-      <div class="overlay"></div>
+    <nav className="navbar navbar-expand-lg">
+      <ul className="navbar-nav mr-auto">
+        <li>
+          <Link to="/">
+            <img
+              className="logo"
+              src={logo}
+              alt="Carrito de Compras"
+              width={150}
+              height={150}
+            />
+          </Link>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to={`/category/azucareras`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          >
+            <button className="btn btn btn-light" type="button">
+              Azucareras
+            </button>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to={`/category/jarras`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          >
+            <button className="btn btn btn-light" type="button">
+              Jarras
+            </button>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to={`/category/te`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          >
+            <button className="btn btn btn-light" type="button">
+              Juegos de té
+            </button>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to={`/category/teteras`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          >
+            <button className="btn btn btn-light" type="button">
+              Teteras
+            </button>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to={`/category/vajillas`}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          >
+            <button className="btn btn btn-light" type="button">
+              Vajillas
+            </button>
+          </NavLink>
+        </li>
 
-      <div class="utility-nav">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <p class="small">
-                <i class="bx bx-envelope"></i> info@carmesi.co |{" "}
-                <i class="bx bx-phone"></i> +57 3116030381
-              </p>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <p class="small">
-                Envío gratis por compras superiores a $200.000
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar">
-        <div class="left">
-          <li>
-            <Link to="/">
-              <img
-                className="logo"
-                src={logo}
-                alt="Carrito de Compras"
-                width={150}
-                height={150}
-              />
-            </Link>
-          </li>
-        </div>
-
-        <div class="right">
-          <ul class="list">
-            <li></li>
-
-            <li>
-              <a href="/category/jarras">Jarras</a>
-            </li>
-
-            <li>
-              <a href="/category/azucareras">Azucareras</a>
-            </li>
-            <li>
-              <a href="/category/vajillas">Vajillas</a>
-            </li>
-            <li>
-              <a href="/category/teteras">Teteras</a>
-            </li>
-            <li>
-              <a href="/category/te">Juegos de té</a>
-            </li>
-            <li className="nav-item ml-auto">
-              <CartWidget />
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+        <li className="nav-item ml-auto">
+          <CartWidget />
+        </li>
+      </ul>
+    </nav>
   );
 };
-
 export default NavBar;
