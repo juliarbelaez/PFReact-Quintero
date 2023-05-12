@@ -1,3 +1,14 @@
+# Información entrega:
+
+Hecho por: Juliana Quintero Arbeláez
+Curso: React
+Comisión: 39640
+
+# Consideraciones:
+
+Se usó el Framework Bootstrap para la creación de botones, tablas, formularios para el diseño y el desarrollo del sitio.
+Se realizó un ecommerce para una tienda de Cerámica hecha a mano.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
