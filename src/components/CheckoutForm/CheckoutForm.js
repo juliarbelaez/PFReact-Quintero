@@ -28,7 +28,7 @@ const CheckoutForm = ({ onConfirm }) => {
       <form onSubmit={handleConfirm} className="FormFields">
         <div className="form-row">
           <div className="form-group">
-            <label for="inputEmail4">Nombre</label>
+            <label htmlFor="inputEmail4">Nombre</label>
             <input
               type="text"
               id="inputEmail4"
@@ -44,7 +44,7 @@ const CheckoutForm = ({ onConfirm }) => {
             </div>
           </div>
           <div className="form-group">
-            <label for="inputEmail4">Apellido</label>
+            <label htmlFor="inputEmail4">Apellido</label>
             <input
               type="text"
               id="inputEmail4"
@@ -58,7 +58,7 @@ const CheckoutForm = ({ onConfirm }) => {
           </div>
         </div>
         <div className="form-group">
-          <label for="inputEmail4">Celular</label>
+          <label htmlFor="inputEmail4">Celular</label>
           <input
             type="text"
             id="inputEmail4"
@@ -71,7 +71,7 @@ const CheckoutForm = ({ onConfirm }) => {
           />
         </div>
         <div className="form-group">
-          <label for="inputEmail4">Email</label>
+          <label htmlFor="inputEmail4">Email</label>
           <input
             type="email"
             id="inputEmail4"
@@ -84,7 +84,7 @@ const CheckoutForm = ({ onConfirm }) => {
           />
         </div>
         <div className="form-group">
-          <label for="inputEmail4">Verifique su email</label>
+          <label htmlFor="inputEmail4">Verifique su email</label>
           <input
             type="email"
             id="inputEmail4"
@@ -98,7 +98,7 @@ const CheckoutForm = ({ onConfirm }) => {
         </div>
 
         <div className="form-group">
-          <label for="inputEmail4">Dirección de envío</label>
+          <label htmlFor="inputEmail4">Dirección de envío</label>
           <input
             type="text"
             id="inputEmail4"

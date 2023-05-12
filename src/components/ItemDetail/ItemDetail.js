@@ -41,7 +41,7 @@ const ItemDetail = ({
       </div>
 
       <div className="menu">
-        <div id="rp-menu" class="responsive-menu"></div>
+        <div id="rp-menu" className="responsive-menu"></div>
         <label id="openmenu">
           <i className="fa fa-bars" aria-hidden="true"></i>
         </label>
