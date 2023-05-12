@@ -89,10 +89,10 @@ const Checkout = () => {
 
   if (orderId) {
     return (
-      <div class="invoice-card">
+      <div className="invoice-card">
         <h5>Cerámicas Carmesí</h5>
         <h6>Nit: 10356286487-2</h6>
-        <div class="invoice-title">
+        <div className="invoice-title">
           <div id="main-title">
             <h4>Resumen de la compra</h4>
             <span>
@@ -107,8 +107,8 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div class="invoice-details">
-          <table class="invoice-table">
+        <div className="invoice-details">
+          <table className="invoice-table">
             <thead>
               <tr>
                 <td>Id de la compra</td>
@@ -117,7 +117,7 @@ const Checkout = () => {
             </thead>
 
             <tbody>
-              <tr class="row-data">
+              <tr className="row-data">
                 <td>{orderId}</td>
                 <td>
                   {new Date().toLocaleDateString("es-ES", {
@@ -128,7 +128,7 @@ const Checkout = () => {
                 </td>
               </tr>
 
-              <tr class="calc-row">
+              <tr className="calc-row">
                 <td colspan="2">Total</td>
                 <td>{total}</td>
               </tr>
@@ -136,7 +136,7 @@ const Checkout = () => {
           </table>
         </div>
 
-        <div class="invoice-footer">
+        <div className="invoice-footer">
           <p>Gracias por tu compra</p>
         </div>
       </div>

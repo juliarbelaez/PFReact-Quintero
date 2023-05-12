@@ -24,10 +24,10 @@ const CheckoutForm = ({ onConfirm }) => {
     onConfirm(userData);
   };
   return (
-    <div class="containerCheckOut">
+    <div className="containerCheckOut">
       <form onSubmit={handleConfirm} className="FormFields">
-        <div class="form-row">
-          <div class="form-group">
+        <div className="form-row">
+          <div className="form-group">
             <label for="inputEmail4">Nombre</label>
             <input
               type="text"
@@ -39,9 +39,11 @@ const CheckoutForm = ({ onConfirm }) => {
               value={name}
               onChange={({ target }) => setName(target.value)}
             />
-            <div class="invalid-feedback">Por favor, introduzca su nombre.</div>
+            <div className="invalid-feedback">
+              Por favor, introduzca su nombre.
+            </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="inputEmail4">Apellido</label>
             <input
               type="text"
@@ -55,7 +57,7 @@ const CheckoutForm = ({ onConfirm }) => {
             />
           </div>
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="inputEmail4">Celular</label>
           <input
             type="text"
@@ -68,7 +70,7 @@ const CheckoutForm = ({ onConfirm }) => {
             onChange={({ target }) => setPhone(target.value)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="inputEmail4">Email</label>
           <input
             type="email"
@@ -81,7 +83,7 @@ const CheckoutForm = ({ onConfirm }) => {
             onChange={({ target }) => setEmail(target.value)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="inputEmail4">Verifique su email</label>
           <input
             type="email"
@@ -95,7 +97,7 @@ const CheckoutForm = ({ onConfirm }) => {
           />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="inputEmail4">Dirección de envío</label>
           <input
             type="text"

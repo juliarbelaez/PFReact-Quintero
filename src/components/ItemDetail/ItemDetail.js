@@ -32,24 +32,22 @@ const ItemDetail = ({
   };
 
   return (
-    <div class="itemdetail">
-      <div class="boton">
+    <div className="itemdetail">
+      <div className="boton">
         <h1>
           {" "}
-          <label id="eliminar" for="eliminar">
-            X
-          </label>{" "}
+          <label id="eliminar">X</label>{" "}
         </h1>
       </div>
 
-      <div class="menu">
+      <div className="menu">
         <div id="rp-menu" class="responsive-menu"></div>
-        <label id="openmenu" for="menu">
-          <i class="fa fa-bars" aria-hidden="true"></i>
+        <label id="openmenu">
+          <i className="fa fa-bars" aria-hidden="true"></i>
         </label>
       </div>
-      <div class="info">
-        <div class="details">
+      <div className="info">
+        <div className="details">
           <h1>{name}</h1>
           <h6 className="detail">{id}</h6>
           <h6 className="detail">{category}</h6>
@@ -58,10 +56,10 @@ const ItemDetail = ({
           <h6>
             Stock disponible: <strong> {stock} </strong>{" "}
           </h6>
-          <div class="price">
+          <div className="price">
             <strong>${price}</strong>
           </div>
-          <div class="footer">
+          <div className="footer">
             <footer>
               {quantityAdded > 0 ? (
                 <Link to="/cart" className="Option">
@@ -75,7 +73,7 @@ const ItemDetail = ({
             </footer>
           </div>
         </div>
-        <div class="image">
+        <div className="image">
           <img
             src={image}
             alt={name}
