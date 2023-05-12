@@ -1,31 +1,31 @@
-.genel .info {
+.itemdetail .info {
   display: flex;
   width: 90%;
   justify-content: space-between;
   height: calc(100% - 15vh);
   margin: 0 5%;
 }
-.genel .info .details {
+.itemdetail .info .details {
   width: 40%;
 
   padding: 45px 35px;
   height: 90%;
 }
 
-.genel .info .image {
+.itemdetail .info .image {
   width: 58%;
 
   height: 90%;
   padding: 45px 0;
   position: relative;
 }
-.genel .info .image img {
+.itemdetail .info .image img {
   width: 100%;
   border-radius: 20px;
   height: auto;
 }
 
-.sepetim {
+.boton {
   width: 200px;
   height: 100%;
   position: absolute;

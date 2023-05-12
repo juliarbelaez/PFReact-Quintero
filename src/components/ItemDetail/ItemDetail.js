@@ -32,17 +32,17 @@ const ItemDetail = ({
   };
 
   return (
-    <div class="genel">
-      <div class="sepetim">
+    <div class="itemdetail">
+      <div class="boton">
         <h1>
           {" "}
-          <label id="kepe" for="sepet">
+          <label id="eliminar" for="eliminar">
             X
           </label>{" "}
         </h1>
       </div>
 
-      <div class="ust">
+      <div class="menu">
         <div id="rp-menu" class="responsive-menu"></div>
         <label id="openmenu" for="menu">
           <i class="fa fa-bars" aria-hidden="true"></i>
